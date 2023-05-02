@@ -1,0 +1,17 @@
+-------------------------------------------------
+--
+-- Arquivos SQL se dividem em duas linguagens:
+--
+-- DDL (Data Definition Language):
+--
+-- => Comandos de definição do banco de dados;
+--
+-- create, drop, alter;
+--
+-------------------------------------------------
+--
+-- DML (Data Manipulation Language):
+--
+-- => Comandos de manipulação de dados;
+--
+-- insert, select, delete, update;
