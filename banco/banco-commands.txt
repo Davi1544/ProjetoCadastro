@@ -1,0 +1,11 @@
+drop database if exists projetobanco;
+create database projetobanco;
+use projetobanco;
+
+create table user(
+	id_user int(4) primary key auto_increment,
+	nome_user varchar(50) not null,
+    email_user varchar(50) not null,
+    fone_user varchar(30) null,
+    senha varchar(30) not null
+);

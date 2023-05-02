@@ -1,6 +1,6 @@
 -------------------------------------------------
 --
--- Arquivos SQL se dividem em duas linguagens:
+-- Comandos SQL se dividem em duas linguagens:
 --
 -- DDL (Data Definition Language):
 --
