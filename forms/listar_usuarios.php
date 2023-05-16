@@ -25,17 +25,19 @@
                 <th>fone_user</th>
                 <th>senha</th>
                 <th>update</th>
+                <th>delete</th>
             </tr>
         </thead>
         <tbody>
             <?php 
                 do{
-                    echo "<tr><td>".$row['id_user']."</td>";
-                    echo "<td>".$row['nome_user']."</td>";
-                    echo "<td>".$row['email_user']."</td>";
-                    echo "<td>".$row['fone_user']."</td>";
-                    echo "<td>".$row['senha']."</td>";
-                    echo "<td><a href='update.php?id_user=".$row['id_user']."'><button>MUDAR</button></a></td></tr>";
+                    if(isset($row['id_user']))echo "<tr><td>".$row['id_user']."</td>";
+                    if(isset($row['nome_user']))echo "<td>".$row['nome_user']."</td>";
+                    if(isset($row['email_user']))echo "<td>".$row['email_user']."</td>";
+                    if(isset($row['fone_user']))echo "<td>".$row['fone_user']."</td>";
+                    if(isset($row['senha']))echo "<td>".$row['senha']."</td>";
+                    if(isset($row['id_user']))echo "<td><a href='update.php?id_user=".$row['id_user']."'><button>MUDAR</button></a></td>";
+                    if(isset($row['id_user']))echo "<td><a href='delete_user.php?id_user=".$row['id_user']."'><button>DELETAR</button></a></td></tr>";
                 }while($row = mysqli_fetch_array($res))
             ?>
         </tbody>
