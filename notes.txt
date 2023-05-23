@@ -15,3 +15,29 @@
 -- => Comandos de manipulação de dados;
 --
 -- insert, select, delete, update;
+
+Sessão fica armazenada no servidor para compartilhar informações entre páginas
+
+1. INICIANDO:
+
+if(session_status() != PHP_SESSION_ACTIVE){
+    session_cache_expire(60); // 60 minutos
+    session_start();
+}
+
+2. GRAVANDO VALORES:
+
+$_SESSION['chave'] = 'valor';
+$_SESSION['nome_usuario'] = 'Murilo';
+
+3. LEITURA:
+
+echo $_SESSION['nome_usuario'];
+
+4. LIMPANDO DADOS DA SESSÃO:
+
+session_unset();
+
+5. DESTRUIR 
+
+session_destroy();

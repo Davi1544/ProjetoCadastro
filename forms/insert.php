@@ -14,6 +14,7 @@
 
     if(isset($res)){
 
+        echo '<h2>Esse email já foi cadastro no sistema. Para retornar, clique em:</h2>';
         echo '<a href="cadastro.php">cadastro</a>';
 
     }else{
