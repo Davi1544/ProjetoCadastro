@@ -20,11 +20,12 @@
     </style>
 </head>
 <body>
-    <form action="insert.php" method="post">
+    <form action="insert.php" method="post" enctype="multipart/form-data">
         <input type="text" class="form-control" placeholder="nome" name="nome_user" id=""><br>
         <input type="email" class="form-control" placeholder="email" name="email_user" id=""><br>
         <input type="tel" class="form-control" placeholder="telefone" name="fone_user" pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})"><br>
         <input type="password" class="form-control" placeholder="senha" name="senha_user" id=""><br>
+        <input type="file" name="foto" id="foto" class="form-control" accept="image/*">
         <input type="submit" class="btn btn-primary" value="Enviar">
     </form>
 </body>

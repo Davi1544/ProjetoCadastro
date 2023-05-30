@@ -16,7 +16,7 @@
         $row = mysqli_fetch_array($res);
     ?>
     <h1>Todos os Usuários</h1>
-    <table border="1" class="table-dark">
+    <table border="5" class="table-dark">
         <thead>
             <tr>
                 <th>id_user</th>
@@ -26,6 +26,7 @@
                 <th>senha</th>
                 <th>update</th>
                 <th>delete</th>
+                <th>FOTO</th>
             </tr>
         </thead>
         <tbody>
@@ -37,7 +38,8 @@
                     if(isset($row['fone_user']))echo "<td>".$row['fone_user']."</td>";
                     if(isset($row['senha']))echo "<td>".$row['senha']."</td>";
                     if(isset($row['id_user']))echo "<td><a href='update.php?id_user=".$row['id_user']."'><button>MUDAR</button></a></td>";
-                    if(isset($row['id_user']))echo "<td><a href='delete_user.php?id_user=".$row['id_user']."'><button>DELETAR</button></a></td></tr>";
+                    if(isset($row['id_user']))echo "<td><a href='delete_user.php?id_user=".$row['id_user']."'><button>DELETAR</button></a></td>";
+                    if(isset($row['foto_user']))echo "<td><img src='".$row['foto_user']."'></td></tr>";
                 }while($row = mysqli_fetch_array($res))
             ?>
         </tbody>
