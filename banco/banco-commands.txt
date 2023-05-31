@@ -7,5 +7,6 @@ create table user(
 	nome_user varchar(50) not null,
     email_user varchar(50) not null,
     fone_user varchar(30) null,
-    senha varchar(30) not null
+    senha varchar(30) not null,
+    foto_user text not null
 );
